@@ -1,0 +1,18 @@
+
+let f x = x;;
+
+(*Esta es la única manera de hacerlo*)
+
+let h (x,y) = x;;
+
+(*Esta es la única forma de hacerlo*)
+
+let i (x,y) = y;;
+
+(*Esta es la única forma de hacerlo*)
+
+let j x = [x];;
+
+(*Este tipo se puede escribir de infinitas formas por que let j x = [x];x 
+daría también el mismo tipo y podemos poner ;x de forma infinita. Esto hace 
+que tengamos infinitas funciones*)

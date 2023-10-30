@@ -1,0 +1,23 @@
+let f n = if
+n mod 2 = 0 then n / 2 else 3 * n + 1
+
+let rec orbit n = if n=1 then print_endline ("1")
+else (print_int(n);print_string(", ");
+orbit (f(n)))
+
+let rec length n = if n=1 then 0
+else length(f(n))+1
+
+let rec top n = if n=1 then 1
+else  max (top(f n)) n
+
+let rec length'n'top n = if n=1 then (0, 1)
+else let (x,y)=length'n'top(f(n)) in (x+1,max y n)
+
+let rec longest_in x y = if x=y then x
+else let a=longest_in(x+1) y in if length(x) >= length a 
+then x else a
+
+let rec highest_in x y = if x=y then x
+else let a=highest_in(x+1) y in if top(x) >= top a 
+then x else a

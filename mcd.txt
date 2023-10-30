@@ -1,0 +1,33 @@
+let rec mcd  (x,y)=
+  if x>=0 && y>=0 && (x <> 0 || y <> 0) 
+  then
+    if x>y then 
+      if x mod y = 0 
+      then 
+        if x mod(x/y) = 0 && y mod (x/y) = 0 then x/y else y 
+      else 
+      if x mod (x mod y) = 0 then x mod y else 1
+    else mcd  (y,x)
+  else 0;;
+  
+let rec mcd (a, b) =
+        if (b > 0)
+        then mcd  (b,a mod b)
+        else a;;
+(*Implementar el máximo común divisor de forma recursiva*)
+(*¿Ir dividiendo el valor de x e y, comparar el máximo de los divisores y si son iguales devolver ese valor sino 1 ?*)
+(*¿O intentar implementar el algoritmo de Euclides de forma recursiva?*)(*Creo que es la mejor opción*)
+(*¿Usar la función max funcionará?*)
+(*if x>y 
+		then
+			if x mod y = 0 
+				then 
+					x/y 
+				else 
+					if x mod (x mod y) = 0 then x mod y else 2
+		else
+			if y mod x = 0 
+				then 
+					y/x
+				else 
+					if y mod(y mod x) = 0 then y mod x else 1*)

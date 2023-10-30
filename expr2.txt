@@ -1,0 +1,5 @@
+let u = 1+2+3+4;;
+let v = float_of_int 10;;
+let w = char_of_int (1+2+3);;
+let x = (2.0=float_of_int 2);;
+let y = (if 2<4 then "3" else "6");;

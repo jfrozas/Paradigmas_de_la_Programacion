@@ -1,0 +1,14 @@
+let rec fib n =
+	if n <= 1 then n else fib (n-1) + fib (n-2);;
+
+let printfib n = print_endline(string_of_int(fib(n)));;
+
+let rec print_Fib n =
+	if n<1
+	then ()
+	else print_Fib(n-1);
+	printfib(n);;
+	
+if ( Array.length (Sys.argv) = 2) 
+then print_Fib(int_of_string(Array.get Sys.argv(1)))
+else print_endline "numero de argumentos invalido";;

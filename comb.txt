@@ -1,0 +1,17 @@
+let fact n = if n < 2
+    then 1
+    else let rec fact (i, r) = if i = n
+        then r
+        else fact (i + 1, (i + 1) * r)
+    in fact (2, 2);;
+(*no borre esto aunque no se usa por si interfiere con el mli*)
+let rec comb (m, n) =
+    if n < 0 || m < n then 0
+    else  if n = 0 || m = n then 1
+    else comb (m-1, n-1) + comb (m-1, n);;
+
+(*Para poder desarrollar de manera mas optimo este codigo*)
+(*es consejable utilizar el triangulo de pascal visto ya en*)
+(*asignaturas antenriores como puede ser matematica discreta*)
+(*que facilita mucho mas el proceso de obtencion de numeros altos*)
+
